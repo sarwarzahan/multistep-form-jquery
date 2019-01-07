@@ -12,6 +12,7 @@ body {
     padding: 40px;
     width: 70%;
     min-width: 300px;
+    height: 200px;
 }
 
 input {
@@ -28,6 +29,7 @@ input.invalid {
 .question-container {
     display: none;
 }
+
 .active_panel {
     display: block;
 }
@@ -52,6 +54,7 @@ input[type='button']:hover {
 #raq_back {
     background-color: #bbbbbb;
     float: left;
+    display: none;
 }
 #raq_next {
     float: right;

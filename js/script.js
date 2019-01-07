@@ -5,6 +5,7 @@ $(document).ready(function() {
     //$('.question-container:first-child').addClass('active_panel');
     $('.question-container:first-child').fadeIn();
 
+
     $( "#raq_back" ).click(function() {
         nextPrev(-1);
     });
@@ -17,7 +18,7 @@ $(document).ready(function() {
      * @param n
      */
     function showTab(n) {
-        $(".question-container").eq(n).addClass('active_panel');
+        $(".question-container").eq(n).fadeIn();
         if (n == 0) {
             $("#raq_back").css('display','none');
         } else {
@@ -37,7 +38,7 @@ $(document).ready(function() {
      */
     function nextPrev(n) {
         if (n == 1 && !validateForm()) return false;
-        $(".question-container").eq(currentContainer).fadeOut();
+        $(".question-container").eq(currentContainer).css('display','none');
         currentContainer = currentContainer + n;
         if (currentContainer >= $(".question-container").length) {
             $("#raq_questions").submit();
